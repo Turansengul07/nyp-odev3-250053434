@@ -40,9 +40,12 @@ public class Karakter {
         System.out.println("[" + ad + "] " + olay);
     }
 
-    public void hasarAl(int miktar) {
-        // TODO: Miktar pozitif olmalı.
-        // TODO: Can sıfırın altına düşmemeli.
+if (miktar <= 0) {
+    throw new IllegalArgumentException("Hasar pozitif olmalı.");
+}
+
+can = Math.max(0, can - miktar);
+  
     }
 
     public void iyiles(int miktar) {
@@ -65,5 +68,4 @@ public class Karakter {
     public Lonca getLonca() {
         return lonca;
     }
-}
 
